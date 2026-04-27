@@ -1,7 +1,3 @@
-"""Laboratorio 8 - Problema 1.
-
-Implementa una CLI que calcule carga por punto de soporte.
-"""
 import sys
 try:
     if len(sys.argv) != 3:
@@ -16,4 +12,3 @@ try:
         print(f"Load per support point: {load_per_support:.2f} N")
 except ValueError:
         print("Error: Invalid input! Enter numeric values only.")
-# TODO: Implementar según README.md

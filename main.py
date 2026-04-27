@@ -1,6 +1,3 @@
-"""Laboratorio 8 - CLI del gestor de tareas."""
-
-# TODO: Implementar CLI según README.md
 import sys 
 from todo_manager import read_todo_file, write_todo_file
 def main():
@@ -11,16 +8,16 @@ def main():
         if sys.argv[1] == "--help":
             print("""Usage: python main.py <file_path> <command> [arguments]...
 
-            Commands:
-            add "task"    - Add a task to the list.
-            remove "task" - Remove a task from the list.
-            view          - Display all tasks.
+Commands:
+  add "task"    - Add a task to the list.
+  remove "task" - Remove a task from the list.
+  view          - Display all tasks.
 
-            Examples:
-            python main.py tasks.txt add "Buy groceries"
-            python main.py tasks.txt remove "Do laundry"
-            python main.py tasks.txt view
-            python main.py tasks.txt add "Call mom" remove "Take out trash" view""")
+Examples:
+  python main.py tasks.txt add "Buy groceries"
+  python main.py tasks.txt remove "Do laundry"
+  python main.py tasks.txt view
+  python main.py tasks.txt add "Call mom" remove "Take out trash" view""")
             return
             
 
@@ -68,5 +65,5 @@ def main():
         print(e)
     except Exception as e:
         print(f"Unexpected error: {e}")
-if __name__ == "__main__":
+if __name__ == "__main__":  
     main()
