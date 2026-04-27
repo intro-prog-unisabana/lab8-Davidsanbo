@@ -1,6 +1,6 @@
 import sys
 try:
-    if len(sys.argv) < 4:
+    if len(sys.argv) != 3:
         raise ValueError
     Argumento_uno = float(sys.argv[1])
     Argumento_dos = float(sys.argv[2])
