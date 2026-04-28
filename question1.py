@@ -1,29 +1,15 @@
 # TODO: Implementar según README.md
 import sys
+try:
+    if len(sys.argv) != 3:
+        raise ValueError
+    Argumento_uno = float(sys.argv[1])
+    Argumento_dos = float(sys.argv[2])
 
-def main():
-    try:
-        # Verificar que hay suficientes argumentos
-        if len(sys.argv) < 3:
-            raise ValueError
-
-        # Convertir a números
-        total_load = float(sys.argv[1])
-        num_supports = float(sys.argv[2])
-
-        # Verificar división por cero
-        if num_supports == 0:
-            print("Error: Cannot divide by zero! Supports must be greater than zero.")
-            return
-
-        # Calcular carga por soporte
-        load_per_support = total_load / num_supports
-
-        # Mostrar resultado con 2 decimales
+    if Argumento_dos == 0:
+        print("Error: Cannot divide by zero! Supports must be greater than zero.")
+    else:
+        load_per_support = (Argumento_uno) / (Argumento_dos)
         print(f"Load per support point: {load_per_support:.2f} N")
-
-    except ValueError:
+except ValueError:
         print("Error: Invalid input! Enter numeric values only.")
-
-if _name_ == "_main_":
-    main()
